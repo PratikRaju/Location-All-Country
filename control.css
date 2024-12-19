@@ -1,0 +1,95 @@
+.country-detail-container{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.back-button{
+    box-shadow: 0px 0px 8px 0px rgb(0, 0, 0,0.2);
+    padding: 5px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.countries-detail{
+    margin-top: 30px;
+    display: flex;
+    /* padding: 40px 20px; */
+}
+.countries-detail img{
+    margin-right: 60px;
+    width:35%;
+    /* height:100%; */
+}
+.detail-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 90px;
+    max-height: 150px;
+    flex-wrap: wrap;
+}
+.detail-text p{
+    margin: 0px;
+}
+.border-contries a{
+    box-shadow: 0px 0px 4px 0px rgb(0, 0, 0,0.2);
+    margin-right: 10px;
+    padding: 5px 20px;
+}
+.border-contries p b{
+    margin-right: 10px;
+}
+.border-contries{
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 15px;
+    column-gap:15px;
+}
+.skeliton-image{
+    /* height: 100%;
+    width: 100%; */
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgb(219, 217, 217);
+}
+.skeliton{
+    animation: skeleton-loading 1s linear infinite alternate;
+    /* overflow: hidden; */
+}
+@keyframes skeleton-loading{
+    0%{
+        background-color: hsl(200, 20%, 70%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 100%);
+    }
+}
+.dark-theme{
+    cursor: pointer;
+    display: block;
+}
+.fa-moon{
+    font-size: 20px;
+}
+.light-theme{
+    display: none;
+    cursor: pointer;
+}
+.light-theme.light{
+    display: block;
+}
+.dark-theme.light{
+    display: none;
+}
+@media(max-width:780px){
+    .countries-detail{
+        display: block;
+    }
+    .countries-detail img{
+        width: 100%;
+        height: 50%;
+    }
+    .detail-text p{
+        width: 100%;
+        font-size: 16px;
+    }
+}
